@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHC Cards</title>
+    <style>
+        :root {
+            --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            --rio-gold: #f9c900;
+            --rio-dark-gray: #414042;
+            --rio-dark-blue: #2A6491;
+            --rio-med-blue: #2A96C6;
+            --rio-green: #33A961;
+            --light-text: #ffffff;
+            --dark-text: #404040;
+            --rio-dark-gray2: #575758;
+            --primary-color: var(--rio-gold);
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            border-radius: 0;
+            display: block;
+        }
+        .bg-primary{
+            background-color: var(--primary-color) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe src="https://manuhal.github.io/rhc-card/hello-bootstrap.html"></iframe>
+    </div>
+</body>
+<!-- 
+Q: if i have CSS in this page, can the CSS be applied to the iframe content?
+A: No, CSS in the parent page does not automatically apply to the iframe content. The iframe content must have its own CSS or be styled via JavaScript.
+Q: 
+-->
+</html>
