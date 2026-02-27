@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rio Launch Dashboard</title>
+
+  <!-- Pico CSS v2 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ── Your custom Rio theme overrides for Pico ── */
+    :root {
+      /* Core accent / primary */
+      --pico-primary: #f9c900;                  /* rio-gold – main buttons, links, icons */
+      --pico-primary-background: #f9c900;       /* solid bg when needed */
+      --pico-primary-underline: rgba(249, 201, 0, 0.4);
+      --pico-primary-hover: #e0b200;            /* slightly darker on hover – adjust to taste */
+      --pico-primary-focus: rgba(249, 201, 0, 0.25);
+      --pico-primary-inverse: #1a1a1a;          /* dark text on gold bg */
+
+      /* Secondary / info-ish blue tones */
+      --pico-secondary: #2A6491;                /* rio-dark-blue */
+      --pico-contrast: #2A96C6;                 /* rio-med-blue – can use for visited links etc. */
+
+      /* Success green */
+      --pico-success: #33A961;
+
+      /* Muted / grays for text, borders, backgrounds */
+      --pico-muted-color: #575758;              /* rio-dark-gray2 */
+      --pico-muted-border-color: #414042;       /* rio-dark-gray */
+      --pico-color: #404040;                    /* dark-text */
+      --pico-background-color: #ffffff;         /* light base */
+
+      /* Dark mode adjustments (optional – Pico auto-handles a lot) */
+      [data-theme="dark"] {
+        --pico-primary: #ffd633;                /* brighter gold for dark mode visibility */
+        --pico-primary-hover: #ffcc00;
+        --pico-primary-inverse: #0f0f0f;
+        --pico-muted-color: #a0a0a0;
+        --pico-color: #e0e0e0;
+        --pico-background-color: #1a1a1a;
+      }
+    }
+
+    /* Layout & card tweaks – keep simple */
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--pico-primary);
+    }
+
+    .launch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .launch-card {
+      cursor: pointer;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      background: var(--pico-background-color);
+    }
+
+    .launch-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .launch-card i {
+      font-size: 3.5rem;
+      margin-bottom: 1.2rem;
+      display: block;
+      color: var(--pico-primary);
+    }
+
+    .launch-card h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: var(--pico-color);
+    }
+
+    .launch-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h1>Quick Launch</h1>
+
+    <div class="launch-grid">
+      
+      <article class="launch-card">
+        <a href="https://your-company.com/banner" target="_blank">
+          <i class="fas fa-user-circle"></i>
+          <h2>Banner</h2>
+        </a>
+      </article>
+
+      <article class="launch-card">
+        <a href="https://your-company.com/cognos" target="_blank">
+          <i class="fas fa-chart-bar"></i>
+          <h2>Cognos</h2>
+        </a>
+      </article>
+
+      <article class="launch-card">
+        <a href="https://your-company.com/argos" target="_blank">
+          <i class="fas fa-chart-line"></i>
+          <h2>Argos</h2>
+        </a>
+      </article>
+
+      <article class="launch-card">
+        <a href="https://your-company.com/service-desk" target="_blank">
+          <i class="fas fa-headset"></i>
+          <h2>Service Desk Hub</h2>
+        </a>
+      </article>
+
+      <article class="launch-card">
+        <a href="https://office.com" target="_blank">
+          <i class="fab fa-microsoft"></i>
+          <h2>Office 365</h2>
+        </a>
+      </article>
+
+    </div>
+  </main>
+
+</body>
+</html>

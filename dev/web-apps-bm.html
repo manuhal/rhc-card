@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Launcher</title>
+
+  <!-- Your custom Bulma theme variables -->
+  <style>
+    :root {
+      --bulma-primary-h: 48deg;
+      --bulma-primary-l: 49%;
+      --bulma-link-h: 198deg;
+      --bulma-link-s: 65%;
+      --bulma-link-l: 47%;
+      --bulma-info-s: 65%;
+      --bulma-info-l: 47%;
+      --bulma-success-h: 143deg;
+      --bulma-success-s: 54%;
+      --bulma-success-l: 43%;
+      --bulma-warning-h: 48deg;
+      --bulma-warning-l: 49%;
+    }
+
+    /* Optional: nicer hover & focus style for cards */
+    .app-card {
+      transition: all 0.2s ease;
+      border: 1px solid var(--bulma-border-weak);
+    }
+    .app-card:hover,
+    .app-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+      border-color: hsl(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l));
+    }
+    .app-card .icon.is-large {
+      font-size: 2.5rem;
+    }
+  </style>
+
+  <!-- Bulma + Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" />
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered mb-6">Quick Launch</h1>
+
+      <div class="columns is-multiline is-centered is-variable-4">
+
+        <!-- 1 -->
+        <div class="column is-one-fifth-tablet is-half-mobile">
+          <a href="/banner" class="card app-card is-clickable" aria-label="Go to Banner application">
+            <div class="card-content has-text-centered">
+              <span class="icon is-large has-text-primary mb-3">
+                <i class="fas fa-user-circle"></i>
+              </span>
+              <p class="title is-5">Banner</p>
+              <span class="icon has-text-grey-light">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- 2 -->
+        <div class="column is-one-fifth-tablet is-half-mobile">
+          <a href="/cognos" class="card app-card is-clickable" aria-label="Go to Cognos analytics">
+            <div class="card-content has-text-centered">
+              <span class="icon is-large has-text-primary mb-3">
+                <i class="fas fa-chart-bar"></i>
+              </span>
+              <p class="title is-5">Cognos</p>
+              <span class="icon has-text-grey-light">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- 3 -->
+        <div class="column is-one-fifth-tablet is-half-mobile">
+          <a href="/argos" class="card app-card is-clickable" aria-label="Go to Argos reporting">
+            <div class="card-content has-text-centered">
+              <span class="icon is-large has-text-primary mb-3">
+                <i class="fas fa-chart-line"></i>
+              </span>
+              <p class="title is-5">Argos</p>
+              <span class="icon has-text-grey-light">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- 4 -->
+        <div class="column is-one-fifth-tablet is-half-mobile">
+          <a href="/service-desk" class="card app-card is-clickable" aria-label="Go to Service Desk Hub">
+            <div class="card-content has-text-centered">
+              <span class="icon is-large has-text-primary mb-3">
+                <i class="fas fa-headset"></i>
+              </span>
+              <p class="title is-5">Service Desk Hub</p>
+              <span class="icon has-text-grey-light">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- 5 -->
+        <div class="column is-one-fifth-tablet is-half-mobile">
+          <a href="/office365" class="card app-card is-clickable" aria-label="Go to Microsoft Office 365">
+            <div class="card-content has-text-centered">
+              <span class="icon is-large has-text-primary mb-3">
+                <i class="fab fa-microsoft"></i>
+              </span>
+              <p class="title is-5">Office 365</p>
+              <span class="icon has-text-grey-light">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
