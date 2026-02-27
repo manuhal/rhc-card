@@ -1,0 +1,17 @@
+:root {
+    --rio-gold: #f9c900;
+    --rio-dark-gray: #414042;
+    --rio-dark-blue: #2A6491;
+    --rio-med-blue: #2A96C6;
+    --rio-green: #33A961;
+    --light-text: #ffffff;
+    --dark-text: #404040;
+    --rio-dark-gray2: #575758;
+
+    --pico-primary: var(--rio-gold);
+    --pico-primary-hover: color-mix(in srgb, var(--rio-gold) 85%, black);
+    --pico-color: #ffffff;
+    /* white text on dark bgs */
+    --pico-h1-color: #ffffff;
+    --pico-muted-color: #e0e0e0;
+}
