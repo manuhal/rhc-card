@@ -1,0 +1,43 @@
+/* Rio palette :root */
+:root {
+    --rio-gold: #f9c900;
+    --rio-dark-gray: #414042;
+    --rio-dark-blue: #2A6491;
+    --rio-med-blue: #2A96C6;
+    --rio-green: #33A961;
+    --light-text: #ffffff;
+    --dark-text: #404040;
+    --rio-dark-gray2: #575758;
+
+    /* Bootstrap variables – using Rio colors */
+    --bs-primary: var(--rio-gold);
+    --bs-primary-rgb: 249, 201, 0;
+    --bs-secondary: var(--rio-dark-blue);
+    --bs-secondary-rgb: 42, 100, 145;
+    --bs-success: var(--rio-green);
+    --bs-success-rgb: 51, 169, 97;
+    --bs-danger: #c82333;
+    --bs-danger-rgb: 200, 35, 51;
+    --bs-warning: var(--rio-med-blue);
+    --bs-warning-rgb: 42, 150, 198;
+    --bs-info: #17a2b8;
+    --bs-info-rgb: 23, 162, 184;
+    --bs-light: var(--rio-dark-gray);
+    --bs-light-rgb: 65, 64, 66;
+    --bs-dark: var(--rio-dark-gray2);
+    --bs-dark-rgb: 87, 87, 88;
+
+    /* Optional: tweak some Bootstrap defaults for card feel */
+    --bs-body-bg: #f8f9fa;
+    /* light grayish bg */
+    --bs-body-color: var(--dark-text);
+}
+
+/* Dark mode overrides (Bootstrap auto-handles via data-bs-theme="dark") */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #121212;
+    --bs-body-color: #e0e0e0;
+    --bs-primary: #ffd633;
+    /* brighter gold for dark mode */
+    --bs-primary-rgb: 255, 214, 51;
+}
