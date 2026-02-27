@@ -1,0 +1,25 @@
+/* 
+The official Bootstrap 5 documentation under the "Theming" section. Here is the link to the relevant page: https://getbootstrap.com/docs/5.0/customize/color/. This page provides detailed information on how to customize Bootstrap's color scheme using CSS variables, including examples and best practices for overriding the default colors with your custom Rio Hondo colors.    
+}           
+
+*/
+
+:root {
+    --rio-gold: #f9c900;
+    --rio-dark-gray: #414042;
+    --rio-dark-blue: #2A6491;
+    --rio-med-blue: #2A96C6;
+    --rio-green: #33A961;
+    --light-text: #ffffff;
+    --dark-text: #404040;
+    --rio-dark-gray2: #575758;
+    --primary: var(--rio-gold);
+    --secondary: var(--rio-dark-blue);
+    --success: var(--rio-green);
+    --danger: #c82333;
+    --warning: var(--rio-med-blue);
+    --info: #17a2b8;
+    --light: var(--rio-dark-gray);
+    --dark: var(--rio-dark-gray2);
+    --rio-dark-gray2: #575758;
+}
