@@ -1,4 +1,3 @@
-/* @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"; */
 :root {
   --bulma-primary-h: 48deg;
   --bulma-primary-l: 49%;
@@ -12,5 +11,7 @@
   --bulma-success-l: 43%;
   --bulma-warning-h: 48deg;
   --bulma-warning-l: 49%;
-}
 
+  --bulma-border-weak: hsl(0, 0%, 85%);
+  /* light but visible gray */
+}
