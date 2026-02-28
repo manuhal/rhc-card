@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="light"> <!-- switch to "dark" to test dark mode -->
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,58 +9,60 @@
   <link rel="stylesheet" href="https://manuhal.github.io/rhc-card/css/rhc-bs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Layout tweaks */
     main {
-      padding: 1.5rem 1rem;  /* reduced from 3rem for tighter widget fit */
+      padding: 1rem 0.75rem;           /* very tight for mobile widgets */
       max-width: 1400px;
       margin: auto;
     }
 
     .launch-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));  /* core magic: fits 3–5 based on width */
-      gap: 1rem;  /* balanced spacing; try 0.75rem if too spread out */
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));  /* fits 3 at ~370px+ */
+      gap: 0.75rem;                    /* smaller gap saves space */
     }
 
     .launch-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
       height: 100%;
       cursor: pointer;
-      border-radius: 0.75rem;  /* slightly softer for modern feel */
+      border-radius: 0.6rem;
+      overflow: hidden;                /* clean edges if shadow clips */
     }
 
     .launch-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .launch-card:hover .card-icon {
-      color: rgba(var(--bs-primary-rgb), 0.7);
-      transform: scale(1.15);
+      color: rgba(var(--bs-primary-rgb), 0.75);
+      transform: scale(1.12);
     }
 
     .card-body {
       text-align: center;
-      padding: 1.5rem 1rem;  /* tighter padding to fit narrow cards better */
+      padding: 1rem 0.5rem;            /* much tighter padding */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100%;
+      min-height: 110px;               /* consistent small height */
     }
 
     .card-icon {
-      font-size: 3.2rem;  /* slightly smaller default for better multi-column fit */
-      margin-bottom: 0.9rem;
+      font-size: 2.6rem;               /* smaller icon for narrow cards */
+      margin-bottom: 0.6rem;
       color: var(--bs-primary);
       display: block;
     }
 
     .card-title {
       margin: 0;
-      font-size: 1.2rem;  /* balanced for small cards */
+      font-size: 1rem;                 /* readable but compact */
       color: var(--bs-body-color);
-      line-height: 1.3;
+      line-height: 1.25;
+      font-weight: 500;                /* slight emphasis helps legibility */
     }
 
     .card-link {
@@ -70,17 +72,28 @@
       height: 100%;
     }
 
-    /* Very narrow fallback (e.g. mobile dashboard view) */
+    /* Super-narrow phones / very tight Ellucian card embed */
     @media (max-width: 400px) {
       .launch-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 0.75rem;
+        grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+        gap: 0.6rem;
       }
       .card-icon {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
       }
       .card-body {
-        padding: 1.25rem 0.75rem;
+        padding: 0.9rem 0.4rem;
+        min-height: 100px;
+      }
+      .card-title {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Optional: force 3 even earlier if Ellucian forces extreme narrowness */
+    @media (min-width: 370px) and (max-width: 500px) {
+      .launch-grid {
+        grid-template-columns: repeat(3, 1fr);  /* hard 3-col lock in this range */
       }
     }
   </style>
@@ -90,8 +103,7 @@
     <div class="launch-grid">
       <div class="launch-card shadow-sm border-0">
         <a href="https://prod-ban9-appnav.riohondo.edu:8443/applicationNavigator/seamless"
-          target="_blank" rel="noopener noreferrer"
-          class="card-link">
+          target="_blank" rel="noopener noreferrer" class="card-link">
           <div class="card-body">
             <i class="fas fa-user-circle card-icon" aria-hidden="true"></i>
             <h2 class="card-title">Banner</h2>
@@ -101,8 +113,7 @@
 
       <div class="launch-card shadow-sm border-0">
         <a href="http://prod-cognos.riohondo.edu:9300/bi/?perspective=home/"
-          target="_blank" rel="noopener noreferrer"
-          class="card-link">
+          target="_blank" rel="noopener noreferrer" class="card-link">
           <div class="card-body">
             <i class="fas fa-chart-bar card-icon" aria-hidden="true"></i>
             <h2 class="card-title">Cognos</h2>
@@ -112,8 +123,7 @@
 
       <div class="launch-card shadow-sm border-0">
         <a href="https://maps880.riohondo.edu/Argos/AWV/#explorer/"
-          target="_blank" rel="noopener noreferrer"
-          class="card-link">
+          target="_blank" rel="noopener noreferrer" class="card-link">
           <div class="card-body">
             <i class="fas fa-chart-line card-icon" aria-hidden="true"></i>
             <h2 class="card-title">Argos</h2>
@@ -123,8 +133,7 @@
 
       <div class="launch-card shadow-sm border-0">
         <a href="https://www.riohondo.edu/services/"
-          target="_blank" rel="noopener noreferrer"
-          class="card-link">
+          target="_blank" rel="noopener noreferrer" class="card-link">
           <div class="card-body">
             <i class="fas fa-headset card-icon" aria-hidden="true"></i>
             <h2 class="card-title">Service Desk Hub</h2>
@@ -134,8 +143,7 @@
 
       <div class="launch-card shadow-sm border-0">
         <a href="https://www.microsoft.com/en-au/microsoft-365"
-          target="_blank" rel="noopener noreferrer"
-          class="card-link">
+          target="_blank" rel="noopener noreferrer" class="card-link">
           <div class="card-body">
             <i class="fab fa-microsoft card-icon" aria-hidden="true"></i>
             <h2 class="card-title">Office 365</h2>
