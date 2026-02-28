@@ -1,17 +1,44 @@
-:root {
-    --rio-gold: #f9c900;
-    --rio-dark-gray: #414042;
-    --rio-dark-blue: #2A6491;
-    --rio-med-blue: #2A96C6;
-    --rio-green: #33A961;
-    --light-text: #ffffff;
-    --dark-text: #404040;
-    --rio-dark-gray2: #575758;
+   /* ── Your custom Rio theme overrides for Pico ── */
+   :root {
+       /* Core accent / primary */
+       --pico-primary: #f9c900;
+       /* rio-gold – main buttons, links, icons */
+       --pico-primary-background: #f9c900;
+       /* solid bg when needed */
+       --pico-primary-underline: rgba(249, 201, 0, 0.4);
+       --pico-primary-hover: #e0b200;
+       /* slightly darker on hover – adjust to taste */
+       --pico-primary-focus: rgba(249, 201, 0, 0.25);
+       --pico-primary-inverse: #1a1a1a;
+       /* dark text on gold bg */
 
-    --pico-primary: var(--rio-gold);
-    --pico-primary-hover: color-mix(in srgb, var(--rio-gold) 85%, black);
-    --pico-color: #ffffff;
-    /* white text on dark bgs */
-    --pico-h1-color: #ffffff;
-    --pico-muted-color: #e0e0e0;
-}
+       /* Secondary / info-ish blue tones */
+       --pico-secondary: #2A6491;
+       /* rio-dark-blue */
+       --pico-contrast: #2A96C6;
+       /* rio-med-blue – can use for visited links etc. */
+
+       /* Success green */
+       --pico-success: #33A961;
+
+       /* Muted / grays for text, borders, backgrounds */
+       --pico-muted-color: #575758;
+       /* rio-dark-gray2 */
+       --pico-muted-border-color: #414042;
+       /* rio-dark-gray */
+       --pico-color: #404040;
+       /* dark-text */
+       --pico-background-color: #ffffff;
+       /* light base */
+
+       /* Dark mode adjustments (optional – Pico auto-handles a lot) */
+       [data-theme="dark"] {
+           --pico-primary: #ffd633;
+           /* brighter gold for dark mode visibility */
+           --pico-primary-hover: #ffcc00;
+           --pico-primary-inverse: #0f0f0f;
+           --pico-muted-color: #a0a0a0;
+           --pico-color: #e0e0e0;
+           --pico-background-color: #1a1a1a;
+       }
+   }
