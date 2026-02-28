@@ -1,4 +1,13 @@
 :root {
+  --rio-gold: #f9c900;
+  --rio-dark-gray: #414042;
+  --rio-dark-blue: #2A6491;
+  --rio-med-blue: #2A96C6;
+  --rio-green: #33A961;
+  --light-text: #ffffff;
+  --dark-text: #404040;
+  --rio-dark-gray2: #575758;
+
   --bulma-primary-h: 48deg;
   --bulma-primary-l: 49%;
   --bulma-link-h: 143deg;
@@ -13,5 +22,4 @@
   --bulma-warning-l: 49%;
 
   --bulma-border-weak: hsl(0, 0%, 85%);
-  /* light but visible gray */
 }
