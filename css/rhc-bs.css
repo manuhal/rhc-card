@@ -14,6 +14,17 @@
     --bs-primary-rgb: 249, 201, 0;
     --bs-secondary: var(--rio-dark-blue);
     --bs-secondary-rgb: 42, 100, 145;
+
+    /* Primary subtle family: keep hue, big tint toward white */
+    --bs-primary-bg-subtle: color-mix(in srgb, var(--bs-primary) 99%, white 1%);
+    --bs-primary-border-subtle: color-mix(in srgb, var(--bs-primary) 20%, white 80%);
+    --bs-primary-text-emphasis: color-mix(in srgb, var(--bs-primary) 80%, black 20%);
+
+    /* Secondary subtle family (dark blue) – similar logic */
+    --bs-secondary-bg-subtle: color-mix(in srgb, var(--bs-secondary) 10%, white 90%);
+    --bs-secondary-border-subtle: color-mix(in srgb, var(--bs-secondary) 25%, white 75%);
+    --bs-secondary-text-emphasis: color-mix(in srgb, var(--bs-secondary) 85%, black 15%);
+
     --bs-success: var(--rio-green);
     --bs-success-rgb: 51, 169, 97;
     --bs-danger: #c82333;
