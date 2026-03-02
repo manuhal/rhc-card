@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Typed.js Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>body{font-family:system-ui;padding:40px}</style>
+</head>
+<body>
+  <span id="typed"></span>
+
+  <script>
+    const phrases = [
+      "Welcome",
+      "Bienvenido",
+      "Bienvenue",
+      "欢迎 (Huānyíng)",
+      "환영합니다 (Hwanyeonghamnida)"
+    ];
+
+    new Typed('#typed', {
+      strings: phrases,
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 1200,
+      startDelay: 300,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+      smartBackspace: false
+    });
+  </script>
+</body>
+</html>

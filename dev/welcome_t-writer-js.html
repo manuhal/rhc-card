@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>t-writer.js Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/t-writer.js@2.0.0/dist/t-writer.min.js"></script>
+  <style>body{font-family:system-ui;padding:40px}</style>
+</head>
+<body>
+  <div id="twriter"></div>
+
+  <script>
+    const phrases = [
+      "Welcome",
+      "Bienvenido",
+      "Bienvenue",
+      "欢迎 (Huānyíng)",
+      "환영합니다 (Hwanyeonghamnida)"
+    ];
+
+    const target = document.getElementById('twriter');
+    const writer = new TCreate(target, {
+      loop: true,
+      typeSpeed: 70,
+      deleteSpeed: 40,
+      cursor: { blinkSpeed: 500, content: '|' }
+    });
+
+    // t-writer.js API composes writer functions; create sequences per phrase
+    const sequence = phrases.flatMap(p => [
+      writer.type(p),
+      writer.pause(1200),
+      writer.remove(p.length)
+    ]);
+
+    writer.add(sequence).start();
+  </script>
+</body>
+</html>
