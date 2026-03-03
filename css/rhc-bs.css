@@ -39,7 +39,7 @@
     --bs-dark-rgb: 87, 87, 88;
 
     /* Optional: tweak some Bootstrap defaults for card feel */
-    --bs-body-bg: #f8f9fa;
+    --bs-body-bg: #ffffff;
     /* light grayish bg */
     --bs-body-color: var(--dark-text);
 }
